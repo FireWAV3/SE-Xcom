@@ -1,2 +1,10 @@
 *.class
 *.log
+
+# Intellij
+/.idea/
+target/
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
