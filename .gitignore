@@ -4,11 +4,14 @@
 # Intellij
 /.idea/
 target/
+/out/
+/Xcom.iml
 
 # Scala-IDE specific
 .scala_dependencies
 .worksheet
 
-/Xcom.iml
+#Floorbits
 /.flooignore
 /.floo
+
