@@ -1,6 +1,15 @@
 case class Cell(x:Int, y:Int, otype:String)
 case class Character(name:String, mrange:Int, srange:Int, damage:Int, hp:Int, side:Int, displayname:String,cell:Cell)
 
+def xAxisString(collums: Int) : String = {
+ var abc = "B"
+ var tempReturn = "A\t"
+ for(i <- 0 to collums-1) {
+  tempReturn += (abc+ "\t")
+  abc = (abc(0) + 1).toChar.toString
+ }
+ return tempReturn
+}
 
 case class Field(pX:Int, pY:Int, cells:Vector[Cell], character: Vector[Character]){
  var sizeX = pX-1
@@ -10,11 +19,12 @@ case class Field(pX:Int, pY:Int, cells:Vector[Cell], character: Vector[Character
   var vectorcountF, vectorcountC = 0
   var count = 0
   var temp = "\t "
-  var abc = "A"
+  /*var abc = "A"
   for(i <- 0 to sizeX){
    temp += (abc+ "\t")
    abc = (abc(0) + 1).toChar.toString
-  }
+  }*/
+  temp += xAxisString(sizeX)
   temp += "\n  "
   for (i <- 0 to sizeX){
    temp += "----"
